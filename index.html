@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHone Hount</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div  class="carousel-item active">
+                <img style="height: 500px;" src="phone/screen-2.webp" class="d-block w-100 img-fluid" alt="...">
+                <div class="carousel-caption  d-md-block">
+                  <h5 class="fs-1 text-info fw-bold">Welcome To My Phone Hounter</h5>
+                  <p class="fs-5">Some representativer sit amet consectetur, adipisicing elit. Hic corrupti similique ab corporis officia perspiciatis suscipit cumque necessitatibus, eum culpa quo recusandae accusamus consequuntur! reiciendis nemo laboriosam ab!</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </header>
+    <main class="container mt-5">
+        <section>
+            <div class="mb-3  d-flex gap-3">
+                <label for="exampleInputEmail1" class="form-label text-nowrap fs-2 fw-bold">Sarch Phone:</label>
+                <input type="text" class="form-control w-50" id="filed-search" placeholder="Search Your Phone">
+                <button onclick="searchButton()" class="btn btn-primary w-25">Sarch</button>
+              </div>
+        </section>
+        
+        <section>
+            <!-- 1. Phones Card  -->
+            <div id="phone-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+                <!-- <div class="col">
+                </div> -->
+            </div>
+
+            <!-- 2. Error Massage  -->
+            <div id="no-phone-massage" class="mt-5 d-none">
+                <h1 class="text-warning text-center">No Phone Found!! Please Try a new Sarch</h1>
+            </div>
+
+            <!-- 3. loading Spinner  -->
+            <div id="loding-spenner" class="d-none">
+                <div style="height: 200px;" class="d-flex justify-content-center align-items-center text-success">
+                    <div class="spinner-border" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+            </div>
+
+            <!-- 4. view All part  -->
+            <div id="view-all" class="text-center d-none mb-5">
+                <button onclick="viewAllButton()" class="btn btn-primary">View All</button>
+            </div>       
+        </section>
+
+
+<section>
+<!-- Modal File -->
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch demo modal </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="phone-details" class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bg-dark text-light">
+    <section class=" p-5 text-center d-flex justify-content-evenly">
+        <img style="height: 70px;" src="phone/raw.jfif" alt="">
+        <div>
+            <h3>Creat By Soriful Islam Fahim</h3>
+            <h5>Larner Programing Hero</h5>
+        </div>
+        
+    </section>
+    <section class="container">
+        
+    </section>
+</footer>
+    
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="javascript/app.js"></script>
+</body>
+</html>
